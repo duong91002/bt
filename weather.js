@@ -7,7 +7,7 @@ async function timkiem()
     console.log(vitri);
     let api=`https://api.openweathermap.org/data/2.5/weather?q=${vitri}&appid=9676e0e21bd4cdf269b6408184fa97a6`;
     let data= await fetch(api).then(res=> res.json());
-    if(data.cod==="404")
+    if(data.cod==="404"&&kq==='')
     {
         changeWeather();
     }else{
